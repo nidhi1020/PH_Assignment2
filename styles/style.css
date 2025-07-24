@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    overflow-x: hidden;
+
 }
 .container{
     font-family: "Noto Serif", serif;
     max-width: 1280px;
     margin: 0 auto;
-    background: rgb(245, 248, 255);
-    overflow-x: hidden;
+    background: rgb(245, 248, 255);  
+    width: 100%;
 
 }
 
@@ -40,15 +41,19 @@
 }
 /* banner */
 .banner{
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     
 }
+.banner img{
+    width:50%;
+}
 .banner-left{
     margin-top: 60px;
+    width:50%;
 }
 .banner-left h2 span{
     color: #000000;
@@ -62,20 +67,77 @@
     font-weight: bold;
 
 }
-.banner-left p{
+.banner-left p,.card-section p{
     color: rgba(0, 0, 0, 0.5);
     font-size: 22px;
 
 }
 
+/* card-section */
+.card-section{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-section h3{
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+}
+.card-section h3 span{
+    color: #E95A08;  
+}
+.card img{
+    max-width: 100%; 
+
+}
+.card {
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn{
+    background-color: #E95A08;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    width: 90%;
+    box-sizing: border-box;
+}
+.card h4{
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+
+}
+.card h4.price{
+    font-weight: bold;
+}
+
+.cards{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
 /* responsive */
-@media screen and (max-width:597px){
+@media (max-width:576px){
     .nav{
         display: flex;
         justify-content:space-between;
-        align-items: center;
-        padding: 20px 30px;
-        width: 100%;
+
+    }
+    .nav img{
+        height: 10px;
+        width: auto;
     }
     .list li:not(.cart){
         display: none;
@@ -86,12 +148,33 @@
     .list{
         flex: 1;
         justify-content: flex-end;
+        display: flex;
+        gap: 10px;
     }
     .banner{
         flex-direction: column-reverse;
-        width: 90%;
-        margin-left: 20px;
+        width: 100%;
         
+    }
+    .banner-left{
+        width: 100%;
+        padding: 10px;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .card-section p{
+        max-width: 80%;
+    }
+    .card-section{
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0;
+        gap: 15px;
     }
 
 }
