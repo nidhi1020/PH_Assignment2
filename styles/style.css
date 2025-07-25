@@ -360,9 +360,13 @@
         margin: 10px 0;
         padding: 0px;
     }
+    .deals{
+        margin-top: 100px;
+    }
     .deal-card{
         flex-direction: column;
         margin: 20px;
+        margin-top: 80px;
     }
 
 
@@ -382,7 +386,7 @@
         font-size: 18px;
     }
     .footer{
-        padding: 0;
+        padding: 10px;
         flex-direction: column;
         text-align: left;
     }
